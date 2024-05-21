@@ -1,7 +1,11 @@
 .logo-text {
+  display: initial;
   font-size: 30px;
+  padding: 0;
+  font-weight: 600;
   color: hsl(116, 61%, 31%);
   text-decoration: none;
+  letter-spacing: 1;
 }
 
 .hero-text {
@@ -12,15 +16,114 @@
 }
 
 .first-text {
+  padding-top: 15px;
   font-weight: lighter;
 }
 
 .second-text {
   font-weight: 600;
+  padding-top: 15px;
   text-shadow: 2px 2px 2px rgb(144, 144, 144);
 }
 
 .nav-item {
   font-size: 18px;
   padding: 0 10px;
+}
+
+.main-heading {
+  color: blue;
+}
+
+.sub-heading {
+  color: rgb(20, 111, 231);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.col-md-4:nth-child(1) .box:hover {
+  background-image: linear-gradient(
+    to right,
+    #3b4c61,
+    #3f5063,
+    #22618a,
+    #3e3e87
+  );
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+  cursor: pointer;
+}
+
+.col-md-4:nth-child(2) .box:hover {
+  background-image: linear-gradient(
+    to right,
+    #eb3941,
+    #f15e64,
+    #e14e53,
+    #e2373f
+  );
+  box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+  cursor: pointer;
+}
+
+.col-md-4:nth-child(3) .box:hover {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  cursor: pointer;
+}
+
+.col-md-4:nth-child(4) .box:hover {
+  background-image: linear-gradient(
+    to right,
+    #f5ce62,
+    #e1623c,
+    #ee8b4e,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+  cursor: pointer;
+}
+
+.col-md-4:nth-child(5) .box:hover {
+  background-image: linear-gradient(
+    to right,
+    #667eea,
+    #764ba2,
+    #6b8dd6,
+    #8e37d7
+  );
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+  cursor: pointer;
+}
+
+.col-md-4:nth-child(6) .box:hover {
+  background-image: linear-gradient(
+    to right,
+    #0ba360,
+    #3cba92,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+  cursor: pointer;
+}
+
+.icon img {
+  max-width: 50px;
+  height: auto;
 }
