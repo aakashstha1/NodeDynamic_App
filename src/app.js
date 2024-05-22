@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
 require("./db/conn"); //Connect to DB
+const User = require("./model/user");
 const app = express(); //Instance of an Express application
 const port = process.env.PORT || 8000;
 
@@ -24,6 +25,7 @@ app.use(
   express.static(path.join(__dirname, "../node_modules/jquery/dist"))
 );
 
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(static_path));
 //This middleware serves static files from the public directory. When a request matches a file in this directory, the file is served automatically.
 
@@ -38,6 +40,20 @@ app.get("/", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.render("about");
+});
+
+app.get("/services", (req, res) => {
+  res.render("about");
+});
+
+app.post("/contact", async (req, res) => {
+  try {
+    const userData = new User(req.body);
+    await userData.save();
+    res.status(201).render("index");
+  } catch (e) {
+    res.status(500).send(e);
+  }
 });
 
 //Create Server
